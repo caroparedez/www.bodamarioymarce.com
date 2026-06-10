@@ -644,7 +644,14 @@ var target=new Date('2025-08-15T16:00:00-05:00');
 function pad(n){return String(n).padStart(2,'0');}
 function tick(){
   var diff=target-new Date();
-  if(diff<=0){document.querySelector('.cd-row').innerHTML='<p style="font-family:Cormorant Garamond,serif;font-size:28px;font-style:italic;color:var(--cream)">¡Hoy es el gran día! 🎉</p>';return;}
+  if(diff<=0){
+    var row=document.querySelector('.cd-row');
+    if(row && !row.dataset.done){
+      row.dataset.done='1';
+      row.innerHTML='<div style="font-family:Dancing Script,cursive;font-size:clamp(28px,6vw,48px);color:var(--cream);line-height:1.4;padding:8px 0;">¡Nos casamos el 15 de agosto! 💍<br><span style="font-family:Jost,sans-serif;font-size:13px;letter-spacing:4px;opacity:.6;font-style:normal;text-transform:uppercase;">Montenegro, Quindío · 2025</span></div>';
+    }
+    return;
+  }
   document.getElementById('cdD').textContent=pad(Math.floor(diff/864e5));
   document.getElementById('cdH').textContent=pad(Math.floor((diff%864e5)/36e5));
   document.getElementById('cdM').textContent=pad(Math.floor((diff%36e5)/6e4));
