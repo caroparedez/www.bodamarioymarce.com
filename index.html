@@ -726,29 +726,30 @@ document.querySelectorAll('.rev').forEach(function(el){io.observe(el);});
 
 
 
+
+
 <style>
-/* ── VINTAGE FILTER — estilo foto antigua cálida ── */
+/* ── VINTAGE FILTER — compatible con todos los móviles ── */
 .intro-frame img,
 .gc img,
 .venue-frame img,
-.pet-card img {
-  filter: sepia(55%) saturate(0.85) contrast(0.92) brightness(1.06) hue-rotate(-8deg);
-  transition: filter .5s ease, transform .6s ease;
+.pet-card img,
+#heroBg {
+  -webkit-filter: sepia(50%) contrast(90%) brightness(108%);
+          filter: sepia(50%) contrast(90%) brightness(108%);
+  -webkit-transition: -webkit-filter .5s ease, transform .6s ease;
+          transition: filter .5s ease, transform .6s ease;
 }
-/* Hover: slight reveal, still vintage */
 .intro-frame:hover img,
 .gc:hover img,
 .venue-frame:hover img,
 .pet-card:hover img {
-  filter: sepia(30%) saturate(0.9) contrast(0.95) brightness(1.08) hue-rotate(-5deg);
+  -webkit-filter: sepia(25%) contrast(95%) brightness(110%);
+          filter: sepia(25%) contrast(95%) brightness(110%);
 }
-/* Hero */
-#heroBg {
-  filter: sepia(40%) saturate(0.9) contrast(0.95) brightness(0.92) hue-rotate(-8deg);
-}
-/* Lightbox — full vintage too but a touch more vivid */
 #lb .lb-img {
-  filter: sepia(45%) saturate(0.88) contrast(0.93) brightness(1.05) hue-rotate(-8deg);
+  -webkit-filter: sepia(40%) contrast(92%) brightness(106%);
+          filter: sepia(40%) contrast(92%) brightness(106%);
 }
 </style>
 
