@@ -310,7 +310,7 @@ footer{background:var(--warm);padding:clamp(36px,6vw,52px) 20px;text-align:cente
 }
 @media(hover:none){
   .gc img,.intro-frame img,.venue-frame img,.pet-card img{
-    filter:none!important;transform:none!important;
+    transform:none!important;
   }
 }
 </style>
@@ -728,28 +728,31 @@ document.querySelectorAll('.rev').forEach(function(el){io.observe(el);});
 
 
 
+
+
 <style>
-/* ── VINTAGE FILTER — compatible con todos los móviles ── */
+/* ── VINTAGE FILTER — todos los dispositivos ── */
 .intro-frame img,
 .gc img,
 .venue-frame img,
-.pet-card img,
-#heroBg {
-  -webkit-filter: sepia(50%) contrast(90%) brightness(108%);
-          filter: sepia(50%) contrast(90%) brightness(108%);
-  -webkit-transition: -webkit-filter .5s ease, transform .6s ease;
-          transition: filter .5s ease, transform .6s ease;
+.pet-card img {
+  -webkit-filter: sepia(50%) contrast(90%) brightness(108%) !important;
+          filter: sepia(50%) contrast(90%) brightness(108%) !important;
+  -webkit-transition: -webkit-filter .5s ease, transform .6s ease !important;
+          transition: filter .5s ease, transform .6s ease !important;
 }
-.intro-frame:hover img,
-.gc:hover img,
-.venue-frame:hover img,
-.pet-card:hover img {
-  -webkit-filter: sepia(25%) contrast(95%) brightness(110%);
-          filter: sepia(25%) contrast(95%) brightness(110%);
+@media(hover:hover){
+  .intro-frame:hover img,
+  .gc:hover img,
+  .venue-frame:hover img,
+  .pet-card:hover img {
+    -webkit-filter: sepia(20%) contrast(95%) brightness(110%) !important;
+            filter: sepia(20%) contrast(95%) brightness(110%) !important;
+  }
 }
 #lb .lb-img {
-  -webkit-filter: sepia(40%) contrast(92%) brightness(106%);
-          filter: sepia(40%) contrast(92%) brightness(106%);
+  -webkit-filter: sepia(40%) contrast(92%) brightness(106%) !important;
+          filter: sepia(40%) contrast(92%) brightness(106%) !important;
 }
 </style>
 
