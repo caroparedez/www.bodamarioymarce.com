@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="theme-color" content="#2E1A0E">
-<title>Mario &amp; Marce · 15 Agosto 2025</title>
+<title>Mario &amp; Marce · 15 Agosto 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400;500&family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
 <style>
@@ -345,7 +345,7 @@ footer{background:var(--warm);padding:clamp(36px,6vw,52px) 20px;text-align:cente
       <span class="n2">Marce</span>
     </div>
     <div class="hero-line"><hr><span class="rune">✦ ✦ ✦</span><hr></div>
-    <p class="hero-date">15 &amp; 16 · Agosto · 2025</p>
+    <p class="hero-date">15 &amp; 16 · Agosto · 2026</p>
     <p class="hero-place">Biohotel Serenity Spa · Montenegro, Quindío</p>
   </div>
   <div class="hero-scroll">Descubrir</div>
@@ -635,12 +635,12 @@ footer{background:var(--warm);padding:clamp(36px,6vw,52px) 20px;text-align:cente
 <!-- ═══ FOOTER ═══ -->
 <footer>
   <div class="foot-script">Mario &amp; Marce</div>
-  <p class="foot-sub">15 &amp; 16 · Agosto · 2025 · Montenegro, Quindío</p>
+  <p class="foot-sub">15 &amp; 16 · Agosto · 2026 · Montenegro, Quindío</p>
 </footer>
 
 <script>
 // Countdown
-var target=new Date('2025-08-15T16:00:00-05:00');
+var target=new Date('2026-08-15T16:00:00-05:00');
 function pad(n){return String(n).padStart(2,'0');}
 function tick(){
   var diff=target-new Date();
@@ -648,7 +648,7 @@ function tick(){
     var row=document.querySelector('.cd-row');
     if(row && !row.dataset.done){
       row.dataset.done='1';
-      row.innerHTML='<div style="font-family:Dancing Script,cursive;font-size:clamp(28px,6vw,48px);color:var(--cream);line-height:1.4;padding:8px 0;">¡Nos casamos el 15 de agosto! 💍<br><span style="font-family:Jost,sans-serif;font-size:13px;letter-spacing:4px;opacity:.6;font-style:normal;text-transform:uppercase;">Montenegro, Quindío · 2025</span></div>';
+      row.innerHTML='<div style="font-family:Dancing Script,cursive;font-size:clamp(28px,6vw,48px);color:var(--cream);line-height:1.4;padding:8px 0;">¡Nos casamos el 15 de agosto! 💍<br><span style="font-family:Jost,sans-serif;font-size:13px;letter-spacing:4px;opacity:.6;font-style:normal;text-transform:uppercase;">Montenegro, Quindío · 2026</span></div>';
     }
     return;
   }
@@ -663,10 +663,10 @@ tick();setInterval(tick,1000);
 function addGCal(){
   var t=encodeURIComponent('Boda de Mario & Marce 💍');
   var l=encodeURIComponent('Biohotel Serenity Spa, Km 4 Vía Montenegro-Quimbaya, Quindío');
-  window.open('https://calendar.google.com/calendar/render?action=TEMPLATE&text='+t+'&dates=20250815T160000/20250816T235900&location='+l,'_blank');
+  window.open('https://calendar.google.com/calendar/render?action=TEMPLATE&text='+t+'&dates=20260815T160000/20260816T235900&location='+l,'_blank');
 }
 function getICS(){
-  var c='BEGIN:VCALENDAR\r\nVERSION:2.0\r\nBEGIN:VEVENT\r\nDTSTART;TZID=America/Bogota:20250815T160000\r\nDTEND;TZID=America/Bogota:20250816T235900\r\nSUMMARY:Boda de Mario & Marce 💍\r\nLOCATION:Biohotel Serenity Spa\r\nEND:VEVENT\r\nEND:VCALENDAR';
+  var c='BEGIN:VCALENDAR\r\nVERSION:2.0\r\nBEGIN:VEVENT\r\nDTSTART;TZID=America/Bogota:20260815T160000\r\nDTEND;TZID=America/Bogota:20260816T235900\r\nSUMMARY:Boda de Mario & Marce 💍\r\nLOCATION:Biohotel Serenity Spa\r\nEND:VEVENT\r\nEND:VCALENDAR';
   var a=document.createElement('a');a.href='data:text/calendar;charset=utf-8,'+encodeURIComponent(c);a.download='Boda_Mario_Marce.ics';a.click();
 }
 
